@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music</title>
+    <style>
+		body { 
+			-ms-user-select: none; 
+			-moz-user-select: none; 
+			-webkit-user-select: none; 
+			user-select: none; 
+		}
+	</style>
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="player">
+
+  <h3 id="title">Название трека</h3>
+  <p id="artist">Исполнитель</p>
+
+  <div class="vinyl" id="vinyl">
+    <img id="cover" src="./img/default.jpg" alt="Обложка">
+  </div>
+
+  <!-- ПРОГРЕСС -->
+  <div class="progress-container" onclick="setProgress(event)">
+    <div class="progress" id="progress"></div>
+  </div>
+
+  <!-- ВРЕМЯ -->
+  <div class="time">
+    <span id="current">0:00</span>
+    <span id="duration">0:00</span>
+  </div>
+
+  <!-- КНОПКИ -->
+  <div class="controls">
+    <button onclick="prevSong()">⏮</button>
+    <button onclick="togglePlay()" id="playBtn">▶</button>
+    <button onclick="nextSong()">⏭</button>
+  </div>
+
+
+
+  <audio id="audio"></audio>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>
